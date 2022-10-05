@@ -20,6 +20,15 @@
         izz="${0.5 * mass * radius * radius}" />
     </inertial>
   </xacro:macro>
+  <!-- <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
+    <inertial>
+      <mass value="2" />
+      <xacro:insert_block name="origin" />
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+        iyy="0.01" iyz="0.0"
+        izz="0.01" />
+    </inertial>
+  </xacro:macro> -->
 
   <xacro:macro name="get_visual_params" params="name:=^ type:=^" >
     <xacro:property name="visual_params" value="${sec_mesh_files[name][type]}" scope="parent"/>
